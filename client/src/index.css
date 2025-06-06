@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 210 11% 98%; /* #f8fafc */
+  --foreground: 215 25% 27%; /* #334155 */
+  --muted: 210 40% 95%; /* #f1f5f9 */
+  --muted-foreground: 215 16% 47%; /* #64748b */
+  --popover: 0 0% 100%; /* #ffffff */
+  --popover-foreground: 215 25% 27%; /* #334155 */
+  --card: 0 0% 100%; /* #ffffff */
+  --card-foreground: 215 25% 27%; /* #334155 */
+  --border: 214 32% 91%; /* #e2e8f0 */
+  --input: 214 32% 91%; /* #e2e8f0 */
+  --primary: 221 83% 53%; /* #3b82f6 */
+  --primary-foreground: 210 40% 98%; /* #f8fafc */
+  --secondary: 210 40% 95%; /* #f1f5f9 */
+  --secondary-foreground: 215 25% 27%; /* #334155 */
+  --accent: 210 40% 95%; /* #f1f5f9 */
+  --accent-foreground: 215 25% 27%; /* #334155 */
+  --destructive: 0 84% 60%; /* #ef4444 */
+  --destructive-foreground: 0 0% 98%; /* #fafafa */
+  --ring: 221 83% 53%; /* #3b82f6 */
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 222 84% 5%; /* #0f172a */
+  --foreground: 210 40% 98%; /* #f8fafc */
+  --muted: 217 33% 17%; /* #1e293b */
+  --muted-foreground: 215 20% 65%; /* #94a3b8 */
+  --popover: 222 84% 5%; /* #0f172a */
+  --popover-foreground: 210 40% 98%; /* #f8fafc */
+  --card: 222 84% 5%; /* #0f172a */
+  --card-foreground: 210 40% 98%; /* #f8fafc */
+  --border: 217 33% 17%; /* #1e293b */
+  --input: 217 33% 17%; /* #1e293b */
+  --primary: 221 83% 53%; /* #3b82f6 */
+  --primary-foreground: 210 40% 98%; /* #f8fafc */
+  --secondary: 217 33% 17%; /* #1e293b */
+  --secondary-foreground: 210 40% 98%; /* #f8fafc */
+  --accent: 217 33% 17%; /* #1e293b */
+  --accent-foreground: 210 40% 98%; /* #f8fafc */
+  --destructive: 0 63% 31%; /* #dc2626 */
+  --destructive-foreground: 210 40% 98%; /* #f8fafc */
+  --ring: 221 83% 53%; /* #3b82f6 */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* Custom scrollbar styles */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-muted;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-muted-foreground/30 rounded-full;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted-foreground/50;
+}
+
+/* Line clamp utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
